@@ -1,47 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <title>KNR Movie Reviews</title>
-  </head>
-  <body>
-    <header>
-      <h1>KNR Movie Reviews</h1>
-    </header>
+    <link rel="stylesheet" href="styles.css">
+    <title>KNReview</title>
+</head>
+<body>
+    <div id="nav">
+        <h1>
+            Navbar
+        </h1>
+        <ul>
+            <li>
+                <button id="home-button">Home</button>
+            </li>
+            <li>
+                <button id="log-in-button">Log In</button>
+            </li>
+        </ul>
+    </div>
 
-    <main>
-      <div Class="lazySusan">Kyle
-        <section class="review">
-          <p class="headline">Headling</p>
-          <span class="rating">story: 7 , Effects: 5, Ending: 10</span>
-          <p class="description">blah blha blah</p>
-        </section>
-        <section class="rubric"></section>
-        <section class="author-bio"></section>
-      </div>
-      <div class="lazySusan">Nick
-        <section class="review">
-          <p class="headline">Headling</p>
-          <span class="rating">story: 7 , Effects: 5, Ending: 10</span>
-          <p class="description">blah blha blah</p></section>
-        <section class="rubric"></section>
-        <section class="author-bio"></section>
-      </div>
-      <div class="lazySusan">Ryan
-        <section class="review">
-          <p class="headline">Headling</p>
-          <span class="rating">story: 7 , Effects: 5, Ending: 10</span>
-          <p class="description">blah blha blah</p>
-        </section>
-        <section class="rubric"></section>
-        <section class="author-bio"></section>
-      </div>
-    </main>
+    <div id="home">
+        <button id="new-review-button">Add Review</button>
+        <div class="review-box">
+            <h2 class="movie-title">Inception</h2>
+            <h3 class="overall">9.6</h3>
+            <div class="box">
+                <h3 class="overall">9.3</h3>
+                <h4 class="reviewer">-Kyle</h4>
+            </div>
+            <div class="box">
+                <h3 class="overall">9.5</h3>
 
-    <footer></footer>
+                <h4 class="reviewer">-Nick</h4>
+            </div>
+            <div class="box">
+                <h3 class="overall">10</h3>
+
+                <h4 class="reviewer">-Ryan</h4>
+            </div>
+            <button class="Eidt">Edit</button>
+        </div>
+            
+        <div id="test-display" class="review-box">
+            <h2 class="movie-title">Inception</h2>
+            <h3 class="overall">9.6</h3>
+            <div class="box">
+                <h3 class="overall">9.3</h3>
+                <h4 class="reviewer">-Kyle</h4>
+            </div>
+            <div class="box">
+                <h3 class="overall">9.5</h3>
+
+                <h4 class="reviewer">-Nick</h4>
+            </div>
+            <div class="box">
+                <h3 class="overall">10</h3>
+
+                <h4 class="reviewer">-Ryan</h4>
+            </div>
+            <button class="Eidt">Edit</button>
+        </div>
+
+        <div id="new-review"> <!-- Is this div redundant? Can I just style the class/id of the form directly? -->
+            <form>
+                <label for="movie-title"> Movie Title : 
+                    <input id="new-title" type="text">
+                </label>
+                </br>
+                <label for="rating-kyle"> Kyles Rating:
+                    <input id="new-ratingK" type="number" min="0" max="10" step=".1">
+                </label>
+                </br>
+                <label for="rating-nick"> Nicks Rating:
+                    <input id="new-ratingN" type="number" min="0" max="10" step=".1">
+                </label>
+                </br>
+                <label for="rating-ryan"> Ryans Rating:
+                    <input id="new-ratingR" type="number" min="0" max="12" step=".1">
+                </label>
+                </br>
+                <input type="submit">
+                
+            </form>
+        </div>
+
+        <button id="save-display">Save & Display</button>
+        <button id="test-button">Test</button>
+    </div>
+    <!--
+    <div id="content">
+        <div id="reviews">
+            <div class="review-box">
+                <div id="rating-ryan">
+                    <h2>Inception</h2>
+                    <p>overall rating: </p>
+                    <ul>
+                        <li>Story - 4</li>
+                        <li>Acting - 3</li>
+                        <li>style - 2</li>
+                        <li>Overall Feeling - 1</li>
+                    </ul>
+                    <p>"Blowing the minds of youth everywhere" - ryan</p>
+                </div>
+                <div id="rubric-ryan">
+                    <h3>total possible score: 13 (10 is considered 100% score with three extra credit points possible)</h3>
+                    <p>The following 3 categories are scored from 0-3 with a bonus 4th point if I consider the movie a must watch for this Category.</P>
+                    <P>Category 1 Story</p>
+                    <p>Category 2 Acting</p>
+                    <p>Category 3 Style</p>
+                    <p>After these three main categories I award 0-1 points based on my initial reaction to the movie based solely on how the movie left me feeling.</p>
+                </div>
+                <button id="pivot-ryan">Toggle</button>
+            </div>
+            <div class="review-box"></div>
+            <div class="review-box"></div>
+        </div>
+    </div>    
+    -->
+
+    <div id="log-in">
+        <form action="">
+            <label for="username">username
+                <input name="username" type="text">
+            </label>
+            <label for="password">password:
+                <input name="password" type="text">
+            </label>
+            <input type="submit">
+        </form>
+    </div>
     
+    <div id="footer">
+        <h1>Footer &copy;</h1>
+    </div>
+
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
