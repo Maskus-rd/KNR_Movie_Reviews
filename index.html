@@ -4,9 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>KNReview</title>
+    <title>KNR Movie Reviews</title>
 </head>
 <body>
+
+    <header>
+        <h1> KNR Movie Reviews</h1>
+        <input id="search" type="text" placeholder="search">
+        <button id="new-review-button">+</button> <!-- Not Sure Of the Final Placement for this button -->
+        <form id="passInput">
+            <input id="passValue" type="text" placeholder="Admin Password">
+            <input id="password-submit" type="submit">
+        </form>
+        <form id="movie-entry">
+            <label for="title-field">Title : </label>
+            <input type="text" name="title" placeholder="Movie Title" id="title-field">
+            <label for="director-field">Director : </label>
+            <input type="text" name="director" id="director-field">
+            <label for="genre-field">Genre : </label>
+            <select id="genre-field" placeholder="None">
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Horror">Horror</option>
+                <option value="Drama">Drama</option>
+                <option value="Science Fiction">Sci Fi</option>
+                <option value="Documentry">Documentry</option>
+            </select>
+            <!--<input type="text" name="genre" placeholder="Genre" id="genre-field"> // type should be changed to selection of options -->
+            <input type="submit" id="save-movie">
+        </form>
+        <form id="score-entry">
+            <label for="plot-field">Plot : </label>
+            <input type="number" id="plot-field" max="4" min="1" step="1">
+            <label for="acting-field">Acting : </label>
+            <input type="number" id="acting-field" max="4" min="1" step="1">
+            <label for="style-field">Style : </label>
+            <input type="number" id="style-field" max="4" min="1" step="1">
+            <label for="feeling-field">Overall Feeling : </label>
+            <input type="number" id="feeling-field" min="0" max="1" step=".1">
+            <input type="submit" id="save-review">
+        </form>
+    </header>
+
+    <main id="review-board">
+        <!--Template Below-->
+        <div class="movie-review">
+                <h2>Inception</h2>
+                <p>Director : Christopher Nolan   Genre : Thriller</p>
+                <p>9.4</p>
+            <div class="box-wrapper">
+                <div class="box kyle">
+                    <p >Kyle</p>
+                    <P>overall : 9.2</P>
+                    <p>Plot : 9</p>
+                    <p>Acting : 9.4</p>
+                    <p>Style : 9.2</p>
+                    <p>Feeling : .1</p>
+                    <quote>You'll Never See It Coming!</quote>
+                </div>
+                <div class="box nick">
+                    <p >Nick</p>
+                    <P>overall : 9.2</P>
+                    <p>Plot : 9</p>
+                    <p>Acting : 9.4</p>
+                    <p>Style : 9.2</p>
+                    <p>Feeling : .1</p>
+                    <quote>You'll Never See It Coming!</quote>
+                </div>
+                <div class="box ryan">
+                    <p >Ryan</p>
+                    <P>overall : 9.2</P>
+                    <p>Plot : 9</p>
+                    <p>Acting : 9.4</p>
+                    <p>Style : 9.2</p>
+                    <p>Feeling : .1</p>
+                    <quote>"Blowing the minds of youth everywhere!"</quote>
+                </div>
+            </div>
+            <button class="edit">Edit</button>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Footer &copy;</h3>
+        <ul>
+            <li>
+                <a target="_blank" href="https://huckinvikes.github.io/Hucking-Data/">Hucking Data</a>
+            </li>
+        </ul>
+    </footer>
+
+
+    <!-- Everything commented out below was the site before a vision/plan/wirefrane was implemented -->
+
+    <!--
     <div id="nav">
         <h1>
             Navbar
@@ -20,6 +112,43 @@
             </li>
         </ul>
     </div>
+
+    <div id="admin">
+        <form action="">
+            <label for="password">Admin Password</label></br>
+            <input id="pass-field" name="password" type="text" placeholder="Password">
+            <p id="error">Incorrrect Password</p>
+            
+        </form>
+        <button id="admin-password-button">Enter</button>
+    </div>
+    
+    <div id="new-review">  --> <!-- Is this div redundant? Can I just style the class/id of the form directly? -->
+        <!--
+        <form>
+            <label for="movie-title"> Movie Title : 
+                <input id="new-title" type="text">
+            </label>
+            </br>
+            <label for="rating-kyle"> Kyles Rating:
+                <input id="new-ratingK" type="number" min="0" max="10" step=".1">
+            </label>
+            </br>
+            <label for="rating-nick"> Nicks Rating:
+                <input id="new-ratingN" type="number" min="0" max="10" step=".1">
+            </label>
+            </br>
+            <label for="rating-ryan"> Ryans Rating:
+                <input id="new-ratingR" type="number" min="0" max="12" step=".1">
+            </label>
+            </br>
+            <input type="submit">
+            
+        </form>
+    </div>
+
+    <button id="save-display">Save & Display</button>
+    <button id="test-button">Test</button>
 
     <div id="home">
         <button id="new-review-button">Add Review</button>
@@ -63,32 +192,9 @@
             <button class="Eidt">Edit</button>
         </div>
 
-        <div id="new-review"> <!-- Is this div redundant? Can I just style the class/id of the form directly? -->
-            <form>
-                <label for="movie-title"> Movie Title : 
-                    <input id="new-title" type="text">
-                </label>
-                </br>
-                <label for="rating-kyle"> Kyles Rating:
-                    <input id="new-ratingK" type="number" min="0" max="10" step=".1">
-                </label>
-                </br>
-                <label for="rating-nick"> Nicks Rating:
-                    <input id="new-ratingN" type="number" min="0" max="10" step=".1">
-                </label>
-                </br>
-                <label for="rating-ryan"> Ryans Rating:
-                    <input id="new-ratingR" type="number" min="0" max="12" step=".1">
-                </label>
-                </br>
-                <input type="submit">
-                
-            </form>
-        </div>
-
-        <button id="save-display">Save & Display</button>
-        <button id="test-button">Test</button>
+        
     </div>
+-->
     <!--
     <div id="content">
         <div id="reviews">
@@ -119,7 +225,7 @@
         </div>
     </div>    
     -->
-
+<!--
     <div id="log-in">
         <form action="">
             <label for="username">username
@@ -132,10 +238,8 @@
         </form>
     </div>
     
-    <div id="footer">
-        <h1>Footer &copy;</h1>
-    </div>
-
+    
+-->
 
     <script src="script.js"></script>
 </body>
