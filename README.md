@@ -18,7 +18,7 @@ Will need to look into what data stucture best suits out data curently thinking 
 Note: Try to keep html file slim by managing the majority of it using java script. can test styling using static html for ease. 
 
 
-## <ins>Javescript Notes</ins>
+## <ins>Javascript Notes</ins>
 
 1) For displaying different site elements make functions called elementState() that reads in the current state and the based on what it reads swaps it.
       Ex: logInState(){  checks display status if hidden then show else hide}
